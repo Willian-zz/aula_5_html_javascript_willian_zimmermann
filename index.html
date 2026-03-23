@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- defer serve para rodar carregar depois do site estar totalmente carregado -->
+    <title>Formulário</title>
+</head>
+<body>
+    <main>
+        <h1>Formulário</h1>
+
+        <form action="" id="form-inspecao"> <!-- Para não dar erro com Js, ID sempre único do elemento -->
+            <label for="nome">Nome</label> <!-- for pertence ao id -->
+            <input type="text" id="nome" name="nome"> <!-- id = CPF, name = nome do dado enviado -->
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+
+            <label for="setor">Setor</label>
+            <select name="setor" id="setor">
+                <option value="">Selecione...</option>
+                <option value="operacao">Operação</option>
+                <option value="manutencao">Manutenção</option>
+                <option value="seguranca">Segurança</option>
+            </select>
+
+            <p>Prioridade</p>
+            <label for=""><input type="radio" name="prioridade" value="baixa">Baixa</label>
+            <label for=""><input type="radio" name="prioridade" value="media">Média</label>
+            <label for=""><input type="radio" name="prioridade" value="alta">Alta</label>
+
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="descricao"></textarea>
+
+            <label for=""> <!-- Se o label engloba um item, não precisa do 'for' -->
+                <input type="checkbox" name="termos" id="termos"> Confirmo que revisei os dados <!-- Esse texto interno conta como 'for' -->
+            </label>
+
+            <button type="submit">Enviar</button> <!-- Sempre que tiver um submit em um form ele recarrega a página -->
+            
+            <p id="mensagem"></p>
+        </form>
+    </main>
+</body>
+</html>
